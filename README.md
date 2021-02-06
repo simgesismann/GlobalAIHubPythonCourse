@@ -17,3 +17,12 @@ for i in list2:
 for i in list1:
     swap_list.append(i)
 print(swap_list)
+
+#homework 2
+#ask user input n and print out all even number from 0 to n:
+
+n=input('enter an digit integer n:') #ask user n 
+n_int=int(n) #change type str to int
+for i in range(0,n_int+1): # range which includes the n 
+    if i%2==0: # even numbers
+        print(i)
