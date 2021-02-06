@@ -1,0 +1,25 @@
+##### change the half part of the lists 
+list=[10,25,56,48]
+list1=[]
+list2=[]
+swap_list=[]
+for i in list:
+    if list.index(i)<len(list)/2:  #half of the list
+        list1.append(i)             #adding the values into a new list
+    elif list.index(i)>=len(list)/2 and list.index(i)<=len(list):  #the other half of the list
+        list2.append(i)                 # adding the values into another list
+for i in list2:
+    swap_list.append(i)          #second list values into the swap_list
+for i in list1:
+    swap_list.append(i)           #first list values into the swap_list
+
+list=swap_list
+print(list)
+
+
+###### ask n and show the even numbers in the range
+n=input('enter an digit integer n:')    # ask for n number
+n_int=int(n)        # str to int
+for i in range(0,n_int+1): #range includes the n number
+    if i%2==0:    #evem numbers
+        print(i)
