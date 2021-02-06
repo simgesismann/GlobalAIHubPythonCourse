@@ -1,0 +1,33 @@
+
+user_name="simge"
+password="1234"
+
+user=input("user name:")
+parola=input("password:")
+a=4
+if user_name==user and parola==password:
+    print("the user name and password are correct")
+else :
+    print("try again")
+    user=input("user name:")
+    parola=input("password:")
+    a=0
+while a < 4:
+    if user_name==user and parola==password:
+        print("the user name and password are correct")
+        break
+    else :
+        print("try again")
+        user=input("user name:")
+        parola=input("password:")
+        a += 1
+
+###extra used dictionary:
+
+user={"name":"simge","password":"1234"}
+m=input("user name :")
+n=input("password:")
+if m==user["name"] and n==user["password"]:
+    print("matced,correct")
+else: 
+    print("the password or username is wrong")
