@@ -1,0 +1,46 @@
+class employees():
+    def __init__(self,name,surname,age):
+        self.name=name
+        self.surname=surname
+        self.age=age
+        self.language={""}
+    def showinfo(self):
+        print("name",self.name,"\n","surname", self.surname,"\n""age",self.age)
+    def addlanguage(self,newL):
+        self.language.add(newL)
+    def showLang(self):
+        for lang in self.language:
+            print(lang)
+class manager(employees):
+    def __init__(self):
+        self.programming={""}
+    def yearasmanager(self,year):
+        self.year=year
+        print("manager works for"+ str(year),"year" )
+        
+print("employee Ali's informations")
+ali=employees("ali", "cicek", 28)
+ali.showinfo()
+print("Speak languages:")
+ali.addlanguage("turkish")
+ali.addlanguage("english")
+ali.addlanguage("turkish")
+ali.showLang()
+
+print("")
+print("manager ayse's informations")
+
+ayse=manager()
+ayse.name="ayse"
+ayse.surname="doner"
+ayse.age=4
+ayse.year=3
+ayse.language={""}
+ayse.programming={"c++"}
+ayse.showinfo()
+print("Speak languages:")
+ayse.addlanguage("turkish")
+ayse.addlanguage("english")
+ayse.addlanguage("spanish")
+ayse.showLang()
+ayse.yearasmanager(ayse.year)
