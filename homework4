@@ -1,0 +1,60 @@
+class animal():
+    def __init__(self,besin,yer,omurga,uzuv,kuyruk,ozellik):
+        self.besin=besin
+        self.yer=yer
+        self.omurga=omurga
+        self.uzuv=uzuv
+        self.kuyruk=kuyruk
+        self.ozellik=[]
+    def ozellikekle(self,yeniozellik):
+        self.ozellik.append(yeniozellik)
+        
+class cat(animal):
+    def __init__(self,):
+        self.besin="mama"
+        self.uzuv="pati"
+        self.ozellik=[]
+        self.kuyruk="var"
+        self.omurga="var"
+        self.yer=""
+        
+class dog(animal):
+    def __init__(self):
+        self.besin="kemik"
+        self.uzuv="pati"
+        self.ozellik=[]
+        self.kuyruk="var"
+        self.omurga="var"
+        self.yer=""
+        self.cins=""
+a=cat()
+b=dog()
+
+print("kedi özellikleri")
+a.yer="evcil"
+a.ozellikekle("nankor")
+print("a kesinin besini:" + a.besin)
+print("a kedisi ozellikleri: "+ str(a.ozellik))
+
+
+print("köpek özellikleri")
+b.yer="vahsiortam"
+b.ozellikekle("uysal")
+print("b köğeği besini:"+ b.besin)    
+print("b köpeği kuyruk :"+ b.kuyruk)  
+print("b köpeği yasama alanı:"+ b.yer)
+
+b.ozellikekle("egitilebilir")
+print("b kopegi ozellikleri:"+str(b.ozellik))
+
+print("kuyrugunu kaybetmiş evcil golden retriever, eğitilebilir,uysal,zeki")
+c=dog()
+c.kuyruk="yok"
+c.yer="evcil"
+c.cins="golden retriever"
+print("c köpegi kuyruk:"+ c.kuyruk)
+print("c köpegi uzuv:"+ c.uzuv)
+print("c köpeği yasam alanı:"+ c.yer)
+print("c köpeği cinsi:"+c.cins)
+c.ozellikekle("eğitilebilir,uysal,zeki")
+print("c köpeği özellikleri:"+str(c.ozellik))
